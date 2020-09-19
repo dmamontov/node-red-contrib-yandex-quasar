@@ -1,0 +1,47 @@
+<script type="text/html" data-template-name="quasar-scenario-run">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-creditnals"><i class="icon-tag"></i> Creditnals</label>
+        <input type="text" id="node-input-creditnals" placeholder="Quasar creditnals">
+    </div>
+    <div class="form-row">
+        <label for="node-input-scenario"><i class="fa fa-empire"></i> Scenario ID</label>
+        <input type="text" id="node-input-scenario" placeholder="Scenario ID">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="quasar-scenario-run">
+    <p>Yandex Quasar Scenario Run</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('quasar-scenario-run',{
+        category: 'Yandex Quasar',
+        color: '#9874fc',
+        defaults: {
+            name: {
+                value: null,
+                required: false
+            },
+            creditnals: {
+                type: "quasar-creditnals",
+                required: true
+            },
+            scenario: {
+                value: null,
+                required: false
+            },
+        },
+        inputs:1,
+        outputs:1,
+        align: 'right',
+        outputLabels: ["debug"],
+        icon: 'quasar.png',
+        label: function() {
+            return this.name || "scenario/run";
+        }
+    });
+</script>

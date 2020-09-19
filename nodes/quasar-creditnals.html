@@ -1,0 +1,38 @@
+<script type="text/x-red" data-template-name="quasar-creditnals">
+    <input autocomplete="false" name="hidden" type="text" style="display:none;">
+    <div class="form-row">
+        <label for="node-config-input-name" class="l-width"><i class="fa fa-bookmark"></i> Name</label>
+        <input type="text" id="node-config-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-login"><i class="fa fa-lock"></i> Login</label>
+        <input type="text" id="node-config-input-login" placeholder="Yandex login">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-password"><i class="fa fa-lock"></i> Password</label>
+        <input type="password" id="node-config-input-password" placeholder="Yandex password">
+    </div>
+</script>
+
+<script type='text/javascript'>
+    RED.nodes.registerType('quasar-creditnals', {
+        category: 'config',
+        defaults: {
+            name: {
+                value: null,
+                required: false
+            },
+            login: {
+                value: null,
+                required: true
+            },
+            password: {
+                value: null,
+                required: true
+            }
+        },
+        label: function() {
+            return this.name || this.login;
+        }
+    });
+</script>

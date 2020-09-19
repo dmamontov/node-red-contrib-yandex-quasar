@@ -1,0 +1,43 @@
+{
+  "name": "node-red-contrib-yandex-quasar",
+  "node-red": {
+    "nodes": {
+      "quasar-creditnals": "nodes/quasar-creditnals.js",
+      "quasar-scenario-run": "nodes/quasar-scenario-run.js"
+    }
+  },
+  "keywords": [
+    "node-red",
+    "yandex",
+    "quasar",
+    "mqtt"
+  ],
+  "bugs": {
+    "url": "https://github.com/dmamontov/node-red-contrib-yandex-quasar/issues/"
+  },
+  "homepage": "https://github.com/dmamontov/node-red-contrib-yandex-quasar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmamontov/node-red-contrib-yandex-quasar.git"
+  },
+  "version": "1.0.0",
+  "description": "Yandex Quasar integration",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dmitry Mamontov",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "form-data": "^3.0.0",
+    "md5": "^2.3.0",
+    "node-html-parser": "^1.2.20",
+    "querystring": "^0.2.0",
+    "url-join": "^4.0.1",
+    "url-parse": "^1.4.7"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {}
+}
